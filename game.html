@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Math Challenge | Play</title>
+</head>
+<body>
+    <header>
+        <h2>Math Challenge</h2>
+
+        <!--Navigation Menu-->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="game.html">Play</a>
+        </nav>
+    </header>    
+
+    <main>
+        <section class="game-card">
+
+            <h1>Math Challenge</h1>
+            <p>Choose your difficulty level</p>
+
+            <div id="menu">
+                <button onclick="setMode('easy')">Easy</button>
+                <button onclick="setMode('medium')">Medium</button>
+            </div>
+
+            <div id="game-area" style="display:none;">
+
+                <h3 id="mode-title"></h3>
+
+                <p class="score">
+                    Score: <span id="skor">0</span>
+                </p>
+
+                <div class="equation">
+                    <span id="num1"></span>
+                    <span class="unknown">[?]</span>
+                    <span id="num2"></span>
+                    =
+                    <span id="result"></span>
+                </div>
+
+                <div class="answer-buttons">
+                    <button onclick="checkAnswer('+')">+</button>
+                    <button onclick="checkAnswer('-')">−</button>
+                </div>
+
+                <p id="feedback"></p>
+
+                <button class="back-btn" onclick="back()">
+                    Back to Start
+                </button>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Math Challenge | Full Stack Development</p>
+        <p>2026</p>
+    </footer>
+
+<script src="js/game.js"></script>
+</body>
+</html>
